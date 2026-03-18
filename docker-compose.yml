@@ -1,0 +1,10 @@
+services:
+  link-checker:
+    build: .
+    container_name: link-monitor-externo
+    restart: always
+    environment:
+      - TZ=America/Sao_Paulo
+    env_file:
+      - .env
+    network_mode: host # Facilita o uso de ferramentas de rede
